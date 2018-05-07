@@ -1,0 +1,7 @@
+[error] C:\Users\darek\Desktop\eeeebbbbbiiiizzznnneeesss\app\controllers\ZamowienieController.scala:80:27: value ZamowienieController is not a member of object controllers.routes
+[error]           Redirect(routes.ZamowienieController.index).flashing("success" -> "product.created")
+[error]                           ^
+[error] C:\Users\darek\Desktop\eeeebbbbbiiiizzznnneeesss\app\views\zamowienie.scala.html:10:16: value ZamowienieController is not a member of object controllers.routes
+[error]   @form(routes.ZamowienieController.addZamowienie()) {
+[error]                ^
+[error] two errors found
