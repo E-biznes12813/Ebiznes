@@ -1,0 +1,32 @@
+@(productKoszyk: Form[CreateProductKoszykForm],products: Seq[Product], koszyks: Seq[Koszyk])(implicit request: MessagesRequestHeader)
+
+@import helper._
+
+@request.flash.get("success").map { key =>
+   @request.messages(key)
+}
+
+@main("Welcome to Ebiznes") {
+  @form(routes.ProductKoszykController.addProductKoszyk()) {
+	  @inputText(productKoszyk("liczba"))
+
+	  <select name="product" id="product">
+	  @for(pro <- products){
+		  <option value="@pro.id">@pro.name</option>
+	  }
+	  </select>
+
+	  <select name="koszyk" id="koszyk">
+	  @for(kos <- koszyks){
+		  <option value="@kos.id">@kos.id</option>
+	  }
+	  </select>
+
+
+		@CSRF.formField
+
+		<div class="buttons">
+			<input type="submit" value="Add Product"/>
+		</div>
+	}
+}

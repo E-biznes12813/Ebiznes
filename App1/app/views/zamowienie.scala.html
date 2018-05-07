@@ -1,0 +1,29 @@
+@(zamowienie: Form[CreateZamowienieForm],koszyks: Seq[Koszyk])(implicit request: MessagesRequestHeader)
+
+@import helper._
+
+@request.flash.get("success").map { key =>
+   @request.messages(key)
+}
+
+@main("Welcome to Ebiznes") {
+  @form(routes.ZamowienieController.addZamowienie()) {
+	  <select name="koszyk" id="koszyk">
+	  @for(kos <- koszyks){
+		  <option value="@kos.id">@kos.id</option>
+	  }
+	  </select>
+		@inputText(zamowienie("dataZam"))
+		@inputText(zamowienie("address"))
+	  	@inputText(zamowienie("wartosc"))
+
+
+
+
+		@CSRF.formField
+
+		<div class="buttons">
+			<input type="submit" value="Dodaj zamowienie"/>
+		</div>
+	}
+}

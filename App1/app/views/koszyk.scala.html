@@ -1,0 +1,24 @@
+@(kosz: Form[CreateKoszykForm],product: Seq[User])(implicit request: MessagesRequestHeader)
+
+@import helper._
+
+@request.flash.get("success").map { key =>
+   @request.messages(key)
+}
+
+@main("Welcome to Ebiznes") {
+  @form(routes.KoszykController.addKoszyk()) {
+
+	  <select name="user" id="user">
+	  @for(prod <- product){
+		  <option value="@prod.id">@prod.name</option>
+	  }
+	  </select>
+
+		@CSRF.formField
+
+		<div class="buttons">
+			<input type="submit" value="dodaj koszyk"/>
+		</div>
+	}
+}
