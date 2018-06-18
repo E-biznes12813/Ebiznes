@@ -1,0 +1,4 @@
+[error] C:\Users\darek\Desktop\dfdfdf\eeeebbbbbiiiizzznnneeesss\app\controllers\ApplicationController.scala:83:25: Cannot write an instance of (String, String) to HTTP response. Try to define a Writeable[(String, String)]
+[error]     Future.successful(Ok("obj"->token))
+[error]                         ^
+[error] one error found

@@ -1,0 +1,30 @@
+{
+  "name": "ui",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:9090",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.1.1",
+    "history": "^1.17.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "proxy": "^0.2.4",
+    "react": "^16.4.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0"
+  }
+}

@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.sidebar ul li a:hover, .sidebar ul  {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, .25);
+}
+.sidebar ul ul a {
+  padding-left: 2.5rem;
+  background: rgba(0, 0, 0, .25);
+}
+.sidebar [data-toggle="collapse"] {
+  position: relative;
+}
+.sidebar [data-toggle="collapse"]:before {
+  content: "\f0d7";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 1rem;
+}
+.sidebar [aria-expanded="true"] {
+  background: rgba(0, 0, 0, .25);
+}
+.sidebar [aria-expanded="true"]:before {
+  content: "\f0d8";
+}
+.sidebar.toggled {
+  margin-left: -250px;
+}
+.sidebar {
+  padding: 0px;
+  width: 200px;
+  float: left;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  margin-top: -10px; 
+}
+.sidebar ul li a {
+  display: block;
+  padding: .75rem 1rem;
+  color: rgba(255, 255, 255, .75);
+  text-decoration: none;
+}
